@@ -1,0 +1,54 @@
+% I/O information
+imgFname      =  'datactoolbox.jpeg';
+firstImgFname =  'datactoolbox.jpeg';
+lastImgFname  =  'datactoolbox.jpeg';
+outputFname   =  'datactoolbox.mat';
+
+% Field or lab case situation. 
+% Set field = true for field situation and field = false for lab situation. 
+field = true;
+
+% Camera position 
+% lat/lon for field situation 
+% meter for lab situation
+LON0 = -8.58877;                 
+LAT0 = 115.34996;                   
+
+% Offset from center of the principal point (generally zero)
+ic = 0;
+jc = 0;
+
+% Parameters
+hfov =      10.0;     % Field of view of the camera
+lambda =    2;        % Dip angle above vertical (e.g. straight down = 90, horizontal = 0)  
+phi =       0.0;      % Tilt angle (generally close to 0).
+H =         2;      % Camera altitude
+theta =     90.0;     % View angle clockwise from North (e.g. straight East = 90)
+
+% Uncertainty in parameters. Set the uncertainty to 0.0 for fixed parameters.
+dhfov =     5.0;
+dlambda =   10.0;
+dphi =      5.0;
+dH =        0.0;
+dtheta =    20.0
+
+% Order of the polynomial correction (0, 1 or 2)
+polyOrder = 1;
+
+
+% To save memory calculation can be done in single precision. 
+% For higher precision set the variable 'precision' to 'double';
+precision = 'double';
+
+
+% Ground Control Points (GCP). 
+% The data must come right after the gcpData = true
+gcpData = true;
+980 508 -8.58889 115.35006
+1306 493 -8.58890 115.35001 
+1250 441 -8.58895 115.35004
+1541 398 -8.58895 115.35001 
+1771 306 -8.58914 115.35000
+1589 314 -8.58919 115.35008
+1229 335 -8.58914 115.35018 
+1308 300 -8.58931 115.35022  

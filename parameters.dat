@@ -1,0 +1,52 @@
+% I/O information
+imgFname      =  'CP1-grayscale.JPG';
+firstImgFname =  'CP1-grayscale.JPG';
+lastImgFname  =  'CP1-grayscale.JPG';
+outputFname   =  'CP1-grayscale.mat';
+
+% Field or lab case situation. 
+% Set field = true for field situation and field = false for lab situation. 
+field = true;
+
+% Camera position 
+% lat/lon for field situation 
+% meter for lab situation
+LON0 = -70.6010167;                 
+LAT0 =  47.2713000;                   
+
+% Offset from center of the principal point (generally zero)
+ic = 0;
+jc = 0;
+
+% Parameters
+hfov =      65.0;     % Field of view of the camera
+lambda =    2;        % Dip angle above vertical (e.g. straight down = 90, horizontal = 0)  
+phi =       0.0;      % Tilt angle (generally close to 0).
+H =         720;      % Camera altitude
+theta =     90.0;     % View angle clockwise from North (e.g. straight East = 90)
+
+% Uncertainty in parameters. Set the uncertainty to 0.0 for fixed parameters.
+dhfov =     20.0;
+dlambda =   10.0;
+dphi =      5.0;
+dH =        0.0;
+dtheta =    20.0;
+
+% Order of the polynomial correction (0, 1 or 2)
+polyOrder = 1;
+
+
+% To save memory calculation can be done in single precision. 
+% For higher precision set the variable 'precision' to 'double';
+precision = 'double';
+
+
+% Ground Control Points (GCP). 
+% The data must come right after the gcpData = true
+gcpData = true;
+1862  579	 -70.561  47.303	
+1364  631	 -70.562   47.304	
+  953  428	 -70.563     47.305	
+ 1228  398	 -70.464     47.306	
+ 1653  333	-70.465     47.307	
+ 932  335	-70.466     47.308 	

@@ -1,0 +1,51 @@
+% I/O information
+imgFname      =  'serangan2.jpg';
+firstImgFname =  'serangan2.jpg';
+lastImgFname  =  'serangan2.jpg';
+outputFname   =  'serangan2.mat';
+
+% Field or lab case situation. 
+% Set field = true for field situation and field = false for lab situation. 
+field = true;
+
+% Camera position 
+% lat/lon for field situation 
+% meter for lab situation
+LON0 = -8.73641;                 
+LAT0 =  115.24445;                   
+
+% Offset from center of the principal point (generally zero)
+ic = 0;
+jc = 0;
+
+% Parameters
+hfov =      22.0;     % Field of view of the camera
+lambda =    60;        % Dip angle above vertical (e.g. straight down = 90, horizontal = 0)  
+phi =       0;      % Tilt angle (generally close to 0).
+H =         1;      % Camera altitude
+theta =     30.0;     % View angle clockwise from North (e.g. straight East = 90)
+
+% Uncertainty in parameters. Set the uncertainty to 0.0 for fixed parameters.
+dhfov =     22.0;
+dlambda =   0.0;
+dphi =      5.0;
+dH =        0.0;
+dtheta =    20.0;
+
+% Order of the polynomial correction (0, 1 or 2)
+polyOrder = 1;
+
+
+% To save memory calculation can be done in single precision. 
+% For higher precision set the variable 'precision' to 'double';
+precision = 'double';
+
+
+% Ground Control Points (GCP). 
+% The data must come right after the gcpData = true
+gcpData = true;
+2180 1461 -8.736345 115.24467666666666
+1431 1313 -8.736215 115.24480833333334
+689 1251 -8.736095 115.24483666666666
+1069 1257 -8.736071666666668 115.24492333333
+823 1203  -8.73588 115.24511

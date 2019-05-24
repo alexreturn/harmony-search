@@ -1,0 +1,62 @@
+% I/O information
+imgFname      =  'pantaipatra2.jpg';
+firstImgFname =  'pantaipatra2.jpg';
+lastImgFname  =  'pantaipatra2.jpg';
+outputFname   =  'pantaipatra.mat';
+
+% Field or lab case situation. 
+% Set field = true for field situation and field = false for lab situation. 
+field = true;
+
+% Camera position 
+% lat/lon for field situation 
+% meter for lab situation
+LON0 = -8.74096;                 
+LAT0 =  115.16063;                   
+
+% Offset from center of the principal point (generally zero)
+ic = 0;
+jc = 0;
+
+% Parameters
+hfov =      65.0;     % Field of view of the camera
+lambda =    2;        % Dip angle above vertical (e.g. straight down = 90, horizontal = 0)  
+phi =       0.0;      % Tilt angle (generally close to 0).
+H =         3;      % Camera altitude
+theta =     270.0;     % View angle clockwise from North (e.g. straight East = 90)
+
+% Uncertainty in parameters. Set the uncertainty to 0.0 for fixed parameters.
+dhfov =     20.0;
+dlambda =   10.0;
+dphi =      5.0;
+dH =        0.0;
+dtheta =    0.0;
+
+
+% Order of the polynomial correction (0, 1 or 2)
+polyOrder = 1;
+
+
+% To save memory calculation can be done in single precision. 
+% For higher precision set the variable 'precision' to 'double';
+precision = 'double';
+
+
+% Ground Control Points (GCP). 
+% The data must come right after the gcpData = true
+gcpData = true;
+1234 700 -8.74096 115.16063
+687 719 -8.74080 115.16058
+817 633 -8.74074 115.16048
+990 558 -8.74043 115.16042
+1445 494 -8.74040 115.16058
+1610 454 -8.74024 115.16068
+1368 471 -8.74002 115.16052
+1595 431 -8.73991 115.16068
+1704 410 -8.73984 115.16077
+1477 442 -8.73958 115.16057
+1548 425 -8.73934 115.16062
+1557 413 -8.73896 115.16063
+1701 386 -8.73884 115.16083
+1524 407 -8.73861 115.16058
+1432 410 -8.73832 115.16040

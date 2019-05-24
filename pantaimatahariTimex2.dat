@@ -1,0 +1,57 @@
+% I/O information
+imgFname      =  'newImage.jpg';
+firstImgFname =  'newImage.jpg';
+lastImgFname  =  'newImage.jpg';
+outputFname   =  'newImage.mat';
+
+% Field or lab case situation. 
+% Set field = true for field situation and field = false for lab situation. 
+field = true;
+
+% Camera position 
+% lat/lon for field situation 
+% meter for lab situation
+LON0 = 8.40203;                 
+LAT0 = 115.15674;                   
+ 
+% Offset from center of the principal point (generally zero)
+ic = 0;
+jc = 0;
+
+% Parameters
+hfov =      10;     % Field of view of the camera
+lambda =    20;        % Dip angle above vertical (e.g. straight down = 90, horizontal = 0)  
+phi =       0.0;      % Tilt angle (generally close to 0).
+H =         10;      % Camera altitude
+theta =     90.0;     % View angle clockwise from North (e.g. straight East = 90)
+
+% Uncertainty in parameters. Set the uncertainty to 0.0 for fixed parameters.
+dhfov =     1.0;
+dlambda =   10.0;
+dphi =      50.0;
+dH =        0.0;
+dtheta =    20.0;
+
+
+% Order of the polynomial correction (0, 1 or 2)
+polyOrder = 1;
+
+
+% To save memory calculation can be done in single precision. 
+% For higher precision set the variable 'precision' to 'double';
+precision = 'double';
+
+
+% Ground Control Points (GCP). 
+% The data must come right after the gcpData = true
+gcpData = true;
+334 642 8.70305556 115.43194444
+326 594 8.69111111 115.42694444
+394 582 8.68027778 115.42583333
+414 566 8.92194444 115.42444444
+472 562 8.91166667 115.42694444
+590 552 8.89000000 115.43527778
+580 566 8.90833333 115.43472222
+494 582 8.67027778 115.43083333
+446 600 8.68361111 115.4300000
+356 624 8.69638889 115.42972222

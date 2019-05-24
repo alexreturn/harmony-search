@@ -1,0 +1,667 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>index</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-10-21"><meta name="DC.source" content="index.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> varargout = index(varargin)
+<span class="comment">% INDEX MATLAB code for index.fig</span>
+<span class="comment">%      INDEX, by itself, creates a new INDEX or raises the existing</span>
+<span class="comment">%      singleton*.</span>
+<span class="comment">%</span>
+<span class="comment">%      H = INDEX returns the handle to a new INDEX or the handle to</span>
+<span class="comment">%      the existing singleton*.</span>
+<span class="comment">%</span>
+<span class="comment">%      INDEX('CALLBACK',hObject,eventData,handles,...) calls the local</span>
+<span class="comment">%      function named CALLBACK in INDEX.M with the given input arguments.</span>
+<span class="comment">%</span>
+<span class="comment">%      INDEX('Property','Value',...) creates a new INDEX or raises the</span>
+<span class="comment">%      existing singleton*.  Starting from the left, property value pairs are</span>
+<span class="comment">%      applied to the GUI before index_OpeningFcn gets called.  An</span>
+<span class="comment">%      unrecognized property name or invalid value makes property application</span>
+<span class="comment">%      stop.  All inputs are passed to index_OpeningFcn via varargin.</span>
+<span class="comment">%</span>
+<span class="comment">%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one</span>
+<span class="comment">%      instance to run (singleton)".</span>
+<span class="comment">%</span>
+<span class="comment">% See also: GUIDE, GUIDATA, GUIHANDLES</span>
+
+<span class="comment">% Edit the above text to modify the response to help index</span>
+
+<span class="comment">% Last Modified by GUIDE v2.5 14-Oct-2018 18:51:32</span>
+
+<span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @index_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @index_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+
+
+<span class="comment">% --- Executes just before index is made visible.</span>
+<span class="keyword">function</span> index_OpeningFcn(hObject, eventdata, handles, varargin)
+<span class="comment">% This function has no output args, see OutputFcn.</span>
+<span class="comment">% hObject    handle to figure</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+<span class="comment">% varargin   command line arguments to index (see VARARGIN)</span>
+
+axes(handles.axes27);
+matlabImage = imread(<span class="string">'logounud.png'</span>);
+image(matlabImage)
+axis <span class="string">off</span>
+axis <span class="string">image</span>
+set(handles.uipanel1,<span class="string">'visible'</span>,<span class="string">'on'</span>);
+set(handles.uipanel13,<span class="string">'visible'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% Choose default command line output for index</span>
+handles.output = hObject;
+
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+
+<span class="comment">% UIWAIT makes index wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+
+
+<span class="comment">% --- Outputs from this function are returned to the command line.</span>
+<span class="keyword">function</span> varargout = index_OutputFcn(hObject, eventdata, handles)
+<span class="comment">% varargout  cell array for returning output args (see VARARGOUT);</span>
+<span class="comment">% hObject    handle to figure</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Get default command line output from handles structure</span>
+varargout{1} = handles.output;
+
+
+
+<span class="comment">% --- Executes on button press in pushbutton2.</span>
+
+<span class="comment">% --- Executes on button press in pushbutton4.</span>
+
+
+<span class="comment">% --- Executes on button press in pushbutton5.</span>
+<span class="keyword">function</span> pushbutton10_Callback(hObject, eventdata, handles)
+
+[ video_file_name,video_file_path ] = uigetfile({<span class="string">'video/*.mp4'</span>},<span class="string">'Pick a video file'</span>);      <span class="comment">%;*.png;*.yuv;*.bmp;*.tif'},'Pick a file');</span>
+<span class="keyword">if</span>(video_file_path == 0)
+    <span class="keyword">return</span>;
+<span class="keyword">end</span>
+
+input_video_file = [video_file_path,video_file_name];
+<span class="comment">% Acquiring video</span>
+videoObject = VideoReader(input_video_file);
+<span class="comment">% Display first frame</span>
+frame_1 = read(videoObject,1);
+axes(handles.axes13);
+imshow(frame_1);
+drawnow;
+
+rgbSum = double(frame_1);
+set(handles.text14,<span class="string">'String'</span>,<span class="string">'Status : Process TimeX Image'</span>);
+
+<span class="keyword">for</span> frameCount = 3:50
+    <span class="comment">% Display frames</span>
+    disp(frameCount)
+    frame = read(videoObject,frameCount);
+    imshow(frame);
+  thisFrame = double(read(videoObject, frameCount));
+  rgbSum = rgbSum  + thisFrame;
+    drawnow;
+<span class="keyword">end</span>
+
+rgbMean = rgbSum / 50;
+dst_img=uint8(rgbMean);
+<span class="comment">%figure;imshow(dst_img);</span>
+
+imwrite(dst_img,<span class="string">'CitraTimex.jpg'</span>,<span class="string">'jpg'</span>,<span class="string">'Comment'</span>,<span class="string">'My JPEG file'</span>)
+<span class="comment">% Auto-generated by cameraCalibrator app on 19-Oct-2018</span>
+<span class="comment">%-------------------------------------------------------</span>
+
+
+set(handles.text14,<span class="string">'String'</span>,<span class="string">'Status : Process Kalibrasi Image'</span>);
+<span class="comment">% Define images to process</span>
+imageFileNames = {<span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\1.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\2.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\3.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\4.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\5.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\6.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\7.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\8.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\15.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\19.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\20.jpg'</span>,<span class="keyword">...</span>
+    <span class="string">'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\22.jpg'</span>,<span class="keyword">...</span>
+    };
+<span class="comment">% Detect checkerboards in images</span>
+[imagePoints, boardSize, imagesUsed] = detectCheckerboardPoints(imageFileNames);
+imageFileNames = imageFileNames(imagesUsed);
+
+<span class="comment">% Read the first image to obtain image size</span>
+originalImage = imread(imageFileNames{1});
+[mrows, ncols, ~] = size(originalImage);
+
+<span class="comment">% Generate world coordinates of the corners of the squares</span>
+squareSize = 25;  <span class="comment">% in units of 'millimeters'</span>
+worldPoints = generateCheckerboardPoints(boardSize, squareSize);
+
+<span class="comment">% Calibrate the camera</span>
+[cameraParams, imagesUsed, estimationErrors] = estimateCameraParameters(imagePoints, worldPoints, <span class="keyword">...</span>
+    <span class="string">'EstimateSkew'</span>, false, <span class="string">'EstimateTangentialDistortion'</span>, false, <span class="keyword">...</span>
+    <span class="string">'NumRadialDistortionCoefficients'</span>, 2, <span class="string">'WorldUnits'</span>, <span class="string">'millimeters'</span>, <span class="keyword">...</span>
+    <span class="string">'InitialIntrinsicMatrix'</span>, [], <span class="string">'InitialRadialDistortion'</span>, [], <span class="keyword">...</span>
+    <span class="string">'ImageSize'</span>, [mrows, ncols]);
+
+<span class="comment">% View reprojection errors</span>
+<span class="comment">%h1=figure; showReprojectionErrors(cameraParams);</span>
+
+<span class="comment">% Visualize pattern locations</span>
+<span class="comment">%h2=figure; showExtrinsics(cameraParams, 'CameraCentric');</span>
+
+<span class="comment">% Display parameter estimation errors</span>
+displayErrors(estimationErrors, cameraParams);
+
+<span class="comment">% For example, you can use the calibration data to remove effects of lens distortion.</span>
+undistortedImage = undistortImage(originalImage, cameraParams);
+JJ = undistortImage(dst_img,cameraParams);
+
+<span class="comment">%h22=figure; imshow(JJ);</span>
+imwrite(JJ,<span class="string">'newImage.jpg'</span>,<span class="string">'jpg'</span>,<span class="string">'Comment'</span>,<span class="string">'My JPEG file'</span>)
+handles.videoObject = JJ;
+guidata(hObject,handles);
+
+
+    figure,imshow(JJ),title(<span class="string">'Image Correction'</span>);
+set(handles.text14,<span class="string">'String'</span>,<span class="string">'Status : Done, Start Shoreline Detect'</span>);
+<span class="comment">% See additional examples of how to use the calibration data.  At the prompt type:</span>
+<span class="comment">% showdemo('MeasuringPlanarObjectsExample')</span>
+<span class="comment">% showdemo('StructureFromMotionExample')</span>
+
+
+
+<span class="comment">% --- Executes on button press in pushbutton6.</span>
+<span class="keyword">function</span> pushbutton11_Callback(hObject, eventdata, handles)
+[FileName,FilePath]=uigetfile(<span class="string">'*.jpeg'</span>, <span class="string">'Select a Image'</span>);
+ExPath = [FilePath FileName];
+ uiwait();
+img = imread(ExPath);
+axes(handles.axes13);
+<span class="comment">%imshow(img);</span>
+
+
+<span class="comment">% --- Executes on button press in pushbutton7.</span>
+<span class="keyword">function</span> pushbutton18_Callback(hObject, eventdata, handles)
+
+set(handles.uipanel1,<span class="string">'visible'</span>,<span class="string">'off'</span>);
+set(handles.uipanel13,<span class="string">'visible'</span>,<span class="string">'on'</span>);
+
+<span class="comment">% Acquiring video</span>
+videoObject2 = VideoReader(<span class="string">'20181016_x264.mp4'</span>);
+<span class="comment">% Display first frame</span>
+frame_2 = read(videoObject2,1);
+axes(handles.axes28);
+imshow(frame_2);
+drawnow;
+<span class="keyword">for</span> frameCount = 2:videoObject2.NumberOfFrames
+    <span class="comment">% Display frames</span>
+    frame2 = read(videoObject2,frameCount);
+    imshow(frame2);
+    drawnow;
+<span class="keyword">end</span>
+
+warning(<span class="string">'off'</span>, <span class="string">'Images:initSize:adjustingMag'</span>);
+<span class="comment">% hObject    handle to pushbutton7 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+
+<span class="comment">% --- Executes on button press in pushbutton8.</span>
+<span class="keyword">function</span> pushbutton19_Callback(hObject, eventdata, handles)
+set(handles.uipanel1,<span class="string">'visible'</span>,<span class="string">'on'</span>);
+
+set(handles.uipanel13,<span class="string">'visible'</span>,<span class="string">'off'</span>);
+<span class="comment">% hObject    handle to pushbutton8 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+
+<span class="keyword">function</span> pushbutton9_Callback(hObject, eventdata, handles)
+
+    imgaddr=strcat(<span class="string">'newImage.jpg'</span>);
+
+<span class="comment">%imgaddr = handles.videoObject;</span>
+
+<span class="comment">%imgaddr=rgb2gray(imgaddr);</span>
+    cimg=imgaddr;
+    axes(handles.axes1);
+    imshow(imgaddr);
+
+    set(handles.text14,<span class="string">'String'</span>,<span class="string">'Status : Image Rectification'</span>);
+    pause(1);
+    <span class="comment">% axes(handles.axes1);</span>
+    <span class="comment">% set(handles.axes1,'xtick',[],'ytick',[]);</span>
+
+    axes(handles.axes3);
+    g_rect(imgaddr);
+    set(handles.text14,<span class="string">'String'</span>,<span class="string">'Status : Shoreline Extraction.. Please wait'</span>);
+
+    pause(1);
+
+    axes(handles.axes6);
+   <span class="comment">% set(handles.axes3,'xtick',[],'ytick',[]);</span>
+
+        rgb=Mth_HS1;
+
+
+        axes(handles.axes7);
+        figure,imshow(rgb),title(<span class="string">'shoreline Detect'</span>);
+        hImg=imshow(rgb);
+        metersPerPixel = 5/43;
+
+        XDataInCMeters = get(hImg,<span class="string">'XData'</span>)*metersPerPixel;
+        YDataInCMeters = get(hImg,<span class="string">'YData'</span>)*metersPerPixel;
+        <span class="comment">% Set XData and YData of image to reflect desired units.</span>
+        set(hImg,<span class="string">'XData'</span>,XDataInCMeters,<span class="string">'YData'</span>,YDataInCMeters);
+
+
+        set(gca,<span class="string">'XLim'</span>,XDataInCMeters,<span class="string">'YLim'</span>,YDataInCMeters);
+        hline = imdistline(gca,[10 10],[10 40]);
+        api = iptgetapi(hline);
+        api.setLabelTextFormatter(<span class="string">'%02.2f m'</span>);
+       guidata(hObject, handles);
+      pause(1);
+
+    set(handles.text14,<span class="string">'String'</span>,<span class="string">'Status : Done!'</span>);
+
+
+
+<span class="comment">% --------------------------------------------------------------------</span>
+<span class="keyword">function</span> Untitled_1_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to Untitled_1 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+
+<span class="comment">% --------------------------------------------------------------------</span>
+<span class="keyword">function</span> Untitled_2_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to Untitled_2 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+</pre><img vspace="5" hspace="5" src="index_01.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function varargout = index(varargin)
+% INDEX MATLAB code for index.fig
+%      INDEX, by itself, creates a new INDEX or raises the existing
+%      singleton*.
+%
+%      H = INDEX returns the handle to a new INDEX or the handle to
+%      the existing singleton*.
+%
+%      INDEX('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in INDEX.M with the given input arguments.
+%
+%      INDEX('Property','Value',...) creates a new INDEX or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before index_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to index_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help index
+
+% Last Modified by GUIDE v2.5 14-Oct-2018 18:51:32
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @index_OpeningFcn, ...
+                   'gui_OutputFcn',  @index_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+% REPLACE_WITH_DASH_DASH- Executes just before index is made visible.
+function index_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to index (see VARARGIN)
+
+axes(handles.axes27);
+matlabImage = imread('logounud.png');
+image(matlabImage)
+axis off
+axis image
+set(handles.uipanel1,'visible','on');
+set(handles.uipanel13,'visible','off');
+
+% Choose default command line output for index
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes index wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% REPLACE_WITH_DASH_DASH- Outputs from this function are returned to the command line.
+function varargout = index_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton2.
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton4.
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton5.
+function pushbutton10_Callback(hObject, eventdata, handles)
+
+[ video_file_name,video_file_path ] = uigetfile({'video/*.mp4'},'Pick a video file');      %;*.png;*.yuv;*.bmp;*.tif'},'Pick a file');
+if(video_file_path == 0)
+    return;
+end
+
+input_video_file = [video_file_path,video_file_name];
+% Acquiring video
+videoObject = VideoReader(input_video_file);
+% Display first frame
+frame_1 = read(videoObject,1);
+axes(handles.axes13);
+imshow(frame_1);
+drawnow;
+
+rgbSum = double(frame_1);
+set(handles.text14,'String','Status : Process TimeX Image');
+
+for frameCount = 3:50
+    % Display frames
+    disp(frameCount)
+    frame = read(videoObject,frameCount);
+    imshow(frame);
+  thisFrame = double(read(videoObject, frameCount)); 
+  rgbSum = rgbSum  + thisFrame; 
+    drawnow;
+end
+
+rgbMean = rgbSum / 50;
+dst_img=uint8(rgbMean);
+%figure;imshow(dst_img);
+
+imwrite(dst_img,'CitraTimex.jpg','jpg','Comment','My JPEG file')
+% Auto-generated by cameraCalibrator app on 19-Oct-2018
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+set(handles.text14,'String','Status : Process Kalibrasi Image');
+% Define images to process
+imageFileNames = {'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\1.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\2.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\3.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\4.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\5.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\6.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\7.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\8.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\15.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\19.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\20.jpg',...
+    'D:\data\tesis\Riset CoViMoS\Covimos2.0 edit\Covimos2.0\covimos2.0\calibration_pattern\22.jpg',...
+    };
+% Detect checkerboards in images
+[imagePoints, boardSize, imagesUsed] = detectCheckerboardPoints(imageFileNames);
+imageFileNames = imageFileNames(imagesUsed);
+
+% Read the first image to obtain image size
+originalImage = imread(imageFileNames{1});
+[mrows, ncols, ~] = size(originalImage);
+
+% Generate world coordinates of the corners of the squares
+squareSize = 25;  % in units of 'millimeters'
+worldPoints = generateCheckerboardPoints(boardSize, squareSize);
+
+% Calibrate the camera
+[cameraParams, imagesUsed, estimationErrors] = estimateCameraParameters(imagePoints, worldPoints, ...
+    'EstimateSkew', false, 'EstimateTangentialDistortion', false, ...
+    'NumRadialDistortionCoefficients', 2, 'WorldUnits', 'millimeters', ...
+    'InitialIntrinsicMatrix', [], 'InitialRadialDistortion', [], ...
+    'ImageSize', [mrows, ncols]);
+
+% View reprojection errors
+%h1=figure; showReprojectionErrors(cameraParams);
+
+% Visualize pattern locations
+%h2=figure; showExtrinsics(cameraParams, 'CameraCentric');
+
+% Display parameter estimation errors
+displayErrors(estimationErrors, cameraParams);
+
+% For example, you can use the calibration data to remove effects of lens distortion.
+undistortedImage = undistortImage(originalImage, cameraParams);
+JJ = undistortImage(dst_img,cameraParams);
+
+%h22=figure; imshow(JJ);
+imwrite(JJ,'newImage.jpg','jpg','Comment','My JPEG file')
+handles.videoObject = JJ;
+guidata(hObject,handles);
+
+
+    figure,imshow(JJ),title('Image Correction');
+set(handles.text14,'String','Status : Done, Start Shoreline Detect');
+% See additional examples of how to use the calibration data.  At the prompt type:
+% showdemo('MeasuringPlanarObjectsExample')
+% showdemo('StructureFromMotionExample')
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton6.
+function pushbutton11_Callback(hObject, eventdata, handles)
+[FileName,FilePath]=uigetfile('*.jpeg', 'Select a Image');
+ExPath = [FilePath FileName];
+ uiwait();
+img = imread(ExPath);
+axes(handles.axes13);
+%imshow(img);
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton7.
+function pushbutton18_Callback(hObject, eventdata, handles)
+
+set(handles.uipanel1,'visible','off');
+set(handles.uipanel13,'visible','on');
+
+% Acquiring video
+videoObject2 = VideoReader('20181016_x264.mp4');
+% Display first frame
+frame_2 = read(videoObject2,1);
+axes(handles.axes28);
+imshow(frame_2);
+drawnow;
+for frameCount = 2:videoObject2.NumberOfFrames
+    % Display frames
+    frame2 = read(videoObject2,frameCount);
+    imshow(frame2);
+    drawnow;
+end
+
+warning('off', 'Images:initSize:adjustingMag');
+% hObject    handle to pushbutton7 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton8.
+function pushbutton19_Callback(hObject, eventdata, handles)
+set(handles.uipanel1,'visible','on');
+
+set(handles.uipanel13,'visible','off');
+% hObject    handle to pushbutton8 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+function pushbutton9_Callback(hObject, eventdata, handles)
+ 
+    imgaddr=strcat('newImage.jpg');   
+    
+%imgaddr = handles.videoObject;
+
+%imgaddr=rgb2gray(imgaddr);
+    cimg=imgaddr;
+    axes(handles.axes1);
+    imshow(imgaddr);
+    
+    set(handles.text14,'String','Status : Image Rectification');
+    pause(1);
+    % axes(handles.axes1);
+    % set(handles.axes1,'xtick',[],'ytick',[]);
+    
+    axes(handles.axes3);
+    g_rect(imgaddr);
+    set(handles.text14,'String','Status : Shoreline Extraction.. Please wait');
+    
+    pause(1);
+    
+    axes(handles.axes6);
+   % set(handles.axes3,'xtick',[],'ytick',[]);
+   
+        rgb=Mth_HS1;
+    
+    
+        axes(handles.axes7);
+        figure,imshow(rgb),title('shoreline Detect');
+        hImg=imshow(rgb);   
+        metersPerPixel = 5/43; 
+       
+        XDataInCMeters = get(hImg,'XData')*metersPerPixel;  
+        YDataInCMeters = get(hImg,'YData')*metersPerPixel; 
+        % Set XData and YData of image to reflect desired units.    
+        set(hImg,'XData',XDataInCMeters,'YData',YDataInCMeters); 
+        
+       
+        set(gca,'XLim',XDataInCMeters,'YLim',YDataInCMeters); 
+        hline = imdistline(gca,[10 10],[10 40]);
+        api = iptgetapi(hline); 
+        api.setLabelTextFormatter('%02.2f m'); 
+       guidata(hObject, handles);
+      pause(1);
+      
+    set(handles.text14,'String','Status : Done!');
+    
+
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+function Untitled_1_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+function Untitled_2_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+##### SOURCE END #####
+--></body></html>
